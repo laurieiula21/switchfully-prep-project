@@ -41,3 +41,19 @@ h1 {
 .name {
   color: #ff0055;
 }
+
+.presentation {
+  padding: 10% 20%;
+}
+.presentation p{
+  text-align: center;
+  padding: 10px;
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #4a4a4a;
+
+}
+.presentation span {
+  color: #ff0055
+}
