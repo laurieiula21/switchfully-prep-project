@@ -28,3 +28,16 @@ body {
   font-size: 2rem;
   font-weight: bolder;
 }
+
+section {
+  padding: 15%;
+}
+
+h1 {
+  color: #4a4a4a;
+  text-align: center;
+  font-size: 4rem;
+}
+.name {
+  color: #ff0055;
+}
