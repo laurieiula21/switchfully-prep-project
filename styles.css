@@ -7,9 +7,17 @@ body {
   background-color: #ededed;
 }
 
+@keyframes opacity {
+  0% {opacity: 0;}
+  100% {opacity: 100%;}
+}
+
 .nav-list {
   display: flex;
   justify-content: center;
+  animation-name: opacity;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
 }
 
 .nav-item a{
@@ -29,17 +37,30 @@ body {
   font-weight: bolder;
 }
 
-section {
+.home {
   padding: 15%;
 }
 
-h1 {
+.home-title {
   color: #4a4a4a;
   text-align: center;
   font-size: 4rem;
 }
+
+@keyframes name-drop {
+  0% {transform: translateY(-100px); opacity: 0;}
+
+  100% {transform: translate(0); opacity: 1;}
+}
+
 .name {
   color: #ff0055;
+  display: inline-block;
+  animation-name: name-drop;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+
+
 }
 
 .presentation {
@@ -54,6 +75,109 @@ h1 {
   color: #4a4a4a;
 
 }
+
+
 .presentation span {
-  color: #ff0055
+  color: #ff0055;
+  animation-name: opacity;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+}
+
+.subject {
+  margin-top: 50px;
+}
+
+.intro-subject p{
+  text-align: center;
+  font-size: 1.3rem;
+  color: #858585;
+}
+.subject-title {
+  color: #ff0055;
+  text-align: center;
+  font-size: 3rem;
+  font-family: sans-serif;
+  font-style: italic;
+  animation-name: opacity;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+}
+
+.subject-presentation {
+  width: 65%;
+  margin: 0 auto;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  color: #4a4a4a;
+}
+
+.subject-presentation h2 {
+  text-align: center;
+  color: #ff0055;
+  font-size: 2rem;
+  animation-name: opacity;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+}
+
+.subject-part {
+  width: 50%;
+  padding: 10px;
+}
+
+.subject-part p {
+  margin: 10px;
+}
+
+.subject-presentation span {
+  color: #ff0055;
+  animation-name: opacity;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+}
+
+.list {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes front {
+  0% {width: 50%;}
+  100% {width: 80%;}
+
+}
+.front:hover {
+  animation-name: front;
+  animation-duration: 1s;
+  width: 80%;
+}
+
+@keyframes back {
+  0% {width: 50%;}
+  100% {width: 80%;}
+}
+
+.back:hover {
+  animation-name: back;
+  animation-duration: 1s;
+  width: 80%;
+}
+
+@media only screen and (max-width: 950px) {
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .subject-presentation {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .subject-presentation div {
+    width: 100%;
+  }
 }
